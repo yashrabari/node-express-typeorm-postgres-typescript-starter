@@ -7,13 +7,13 @@ const app = Router()
 
 
 
-app.use("/", (req, res) => {
+app.use('/api', apis)
+
+app.get("/", (req, res) => {
     res.send("Hello World")
 })
 
 
-
-app.use('/api', apis)
 
 
 
