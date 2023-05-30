@@ -14,7 +14,7 @@ const AppDataSource = new DataSource({
     port: 5432,
     entities: ["src/app/models/*{.ts,.js}"],
     synchronize: true,
-    logging: true
+    logging: true,
 })
 
 const twilio = client(process.env.TWILIO_SID, process.env.TWILIO_TOKEN)

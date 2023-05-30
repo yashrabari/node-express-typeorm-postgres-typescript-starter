@@ -7,6 +7,7 @@ const app = Router();
 
 
 app.get('/', PlansController.getPlans)
+// app.post('/', PlansController.createPlan)
 
 
 

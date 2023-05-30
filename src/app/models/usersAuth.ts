@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, OneToOne } from 'typeorm';
+import { UserProfile } from './userProfile';
 
 @Entity()
 export class UserAuth {
@@ -42,5 +43,8 @@ export class UserAuth {
     is2FA: boolean;
 
     @Column({ default: false })
-    isVerfied: boolean
+    isVerfied: boolean;
+
+    @OneToOne(() => UserProfile, (userProfile) => userProfile.userAuth)
+    userProfile: UserProfile;
 }
