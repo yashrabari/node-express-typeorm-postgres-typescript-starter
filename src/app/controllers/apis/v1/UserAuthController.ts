@@ -279,6 +279,13 @@ export const UserAuthController = {
             return res.json({ success: false, msg: "Error changing password" }).status(400)
         }
     },
+    sendOTP: async (req: Request, res: Response) => {
+        try {
+            const { mobile } = req.body;
+        } catch (error) {
+            return res.json({ success: false, msg: "Error sending OTP" }).status(400)
+        }
+    },
 
 
     //admin auth controrllers
